@@ -56,22 +56,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-// Testimonial Section JS 
-<script type="text/javascript">
-  $(document).ready(function(){
-    // Initialize the Slick Slider for the Testimonials Section
-    $('.testimonials-slider').slick({
-      slidesToShow: 1,       // Show 1 testimonial at a time
-      slidesToScroll: 1,     // Scroll 1 testimonial at a time
-      autoplay: true,        // Enable auto sliding
-      autoplaySpeed: 3000,   // Speed of auto sliding (3 seconds)
-      arrows: true,          // Show previous and next arrows
-      prevArrow: '<button class="slick-prev">←</button>',
-      nextArrow: '<button class="slick-next">→</button>',
-      fade: true,            // Enable smooth fade transitions
-      dots: true,            // Show navigation dots (optional)
-      infinite: true         // Infinite loop
-    });
+// Testimonial Section JS
+$(document).ready(function () {
+  // Initialize the Slick Slider for the Testimonials Section
+  $(".testimonials-slider").slick({
+    slidesToShow: 1, // Show 1 testimonial at a time
+    slidesToScroll: 1, // Scroll 1 testimonial at a time
+    autoplay: true, // Enable auto sliding
+    autoplaySpeed: 3000, // Speed of auto sliding (3 seconds)
+    arrows: true, // Show previous and next arrows
+    prevArrow: '<button class="slick-prev">←</button>',
+    nextArrow: '<button class="slick-next">→</button>',
+    fade: true, // Enable smooth fade transitions
+    dots: true, // Show navigation dots (optional)
+    infinite: true, // Infinite loop
   });
-</script>
+});
