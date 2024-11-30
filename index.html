@@ -9,6 +9,27 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
     />
+    <!-- Add Slick CSS in the <head> section -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Add Slick JS at the end of the <body> -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
   </head>
   <body>
     <!-- Header Section -->
@@ -24,7 +45,7 @@
           <i class="fas fa-bars"></i>
         </button>
         <nav class="navbar" aria-label="Primary Navigation">
-          <ul>
+          <ul class="nav-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#courses">Courses</a></li>
@@ -48,15 +69,25 @@
           student. Together, we nurture minds, inspire creativity, and shape
           future leaders.
         </p>
-        <a href="#about" class="btn">Explore Our Vision</a>
+        <p class="secondary-text">
+          At Sunder Deep World School, we believe in creating a foundation that
+          encourages critical thinking, innovation, and personal growth. Join us
+          to unlock your full potential in an environment of care and respect.
+        </p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn">Explore Our Vision</a>
+          <a href="#courses" class="btn-secondary">View Our Courses</a>
+        </div>
       </div>
     </section>
 
     <br />
-    <h1 class="school-feautre">School Features</h1>
+    <h1 class="school-feature">School Features</h1>
+
     <!-- Image Slider Section -->
     <section id="slider" class="slider">
       <div class="slider-container">
+        <!-- Slider Item 1 -->
         <div class="slider-item">
           <img
             src="https://images.unsplash.com/photo-1593642634367-d91a135587b5"
@@ -70,6 +101,7 @@
             </p>
           </div>
         </div>
+        <!-- Slider Item 2 -->
         <div class="slider-item">
           <img
             src="https://imgs.search.brave.com/ylU54EuOWUYCB-Yzk794pLWgv86jzlg2fVZwaHY8ZDA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9hc3NvcnRlZC1z/cG9ydHMtZXF1aXBt/ZW50LWdyZWVuLWdy/YXNzLWZlYXR1cmlu/Zy1zb2NjZXItYmFz/a2V0YmFsbC10ZW5u/aXMtbW9yZS1vdXRk/b29yLWFjdGl2aXRp/ZXNfMTMwMTI5MC0z/NjY4LmpwZz9zaXpl/PTYyNiZleHQ9anBn"
@@ -83,9 +115,10 @@
             </p>
           </div>
         </div>
+        <!-- Slider Item 3 -->
         <div class="slider-item">
           <img
-            src="https://imgs.search.brave.com/ocX___kOvElYK5SscY6Dh8ncp2s-FxGyqt90hYaEu-A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jb21t/dW5pdHlmb2xrYXJ0/Y2VudGVyLm9yZy93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyNC8w/My9zdHJpbmdzYXRj/ZmFjLTMwMHgyMzEu/cG5n"
+            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.teachhub.com%2Fwp-content%2Fuploads%2F2014%2F07%2F7-First-Day-of-School-Activities-Students-Love.jpg&f=1&nofb=1&ipt=8bfbbfef6db3eb52470eb9461394bb2566de2562940b55826a54419f8d1ef309&ipo=images"
             alt="Creative Arts Program"
           />
           <div class="slider-content">
@@ -97,13 +130,16 @@
           </div>
         </div>
       </div>
+      <!-- Navigation Arrows -->
+      <button class="prev" aria-label="Previous Slide">&#10094;</button>
+      <button class="next" aria-label="Next Slide">&#10095;</button>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
-        <h2>About Us</h2>
-        <p>
+        <h2 class="section-title">About Us</h2>
+        <p class="section-description">
           At Sunder Deep World School, we believe in providing a balanced
           education that combines academic excellence with extracurricular
           activities. We focus on nurturing creativity, critical thinking, and
@@ -111,11 +147,13 @@
           tomorrow.
         </p>
         <div class="about-content">
-          <img
-            src="https://cdn4.slideserve.com/8265734/sunder-deep-world-school-n.jpg"
-            alt="School Campus Image"
-            class="about-image"
-          />
+          <div class="about-image-wrapper">
+            <img
+              src="https://cdn4.slideserve.com/8265734/sunder-deep-world-school-n.jpg"
+              alt="School Campus Image"
+              class="about-image"
+            />
+          </div>
           <div class="text">
             <p>
               Our state-of-the-art campus is equipped with modern classrooms,
@@ -146,6 +184,120 @@
           updated to meet the needs of today’s world, preparing students for a
           successful future.
         </p>
+
+        <!-- Accordion for K-12 Classes -->
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Kindergarten
+              <span class="accordion-arrow">&#x2193;</span>
+              <!-- Downward arrow for closed state -->
+            </button>
+            <div class="accordion-content">
+              <p>
+                Our Kindergarten program focuses on building foundational skills
+                through play-based learning. Students explore early literacy,
+                numeracy, and creativity through interactive activities and
+                guided learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 1 & 2
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                In Classes 1 & 2, students begin to build core academic skills
+                such as reading, writing, basic mathematics, and creative
+                thinking. Activities like storytelling, basic science
+                experiments, and art projects are also a key part of the
+                curriculum.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 3 & 4
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                At this stage, students strengthen their skills in subjects like
+                Science, Math, and English while learning about history,
+                geography, and the environment. Hands-on learning through
+                experiments and field trips enhances their curiosity.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 5 & 6
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Students start focusing on more advanced topics, including
+                introduction to computer science, social studies, and art
+                history. This stage emphasizes problem-solving skills and
+                creativity through projects and interactive learning.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 7 & 8
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                In Classes 7 & 8, students are introduced to deeper concepts in
+                Mathematics, Science, and Social Studies. Additionally, they
+                explore elective subjects such as Music, Drama, and Design
+                Technology.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 9 & 10 (Secondary)
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                At this level, students begin preparing for their board exams.
+                Subjects include core Mathematics, Science (Physics, Chemistry,
+                Biology), Social Science, and Languages. Students also begin to
+                focus on their areas of interest with subject-specific training.
+              </p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <button class="accordion-header">
+              Class 11 & 12 (Senior Secondary)
+              <span class="accordion-arrow">&#x2193;</span>
+            </button>
+            <div class="accordion-content">
+              <p>
+                Senior Secondary students can choose from specialized streams:
+                Science (with subjects like Physics, Chemistry, Biology, and
+                Mathematics), Commerce (with Business Studies, Accountancy,
+                Economics), and Humanities (with History, Political Science,
+                Psychology). This phase prepares them for college and
+                competitive exams.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Courses Information -->
         <div class="course-grid">
           <div class="course-card">
             <h3>STEM Program</h3>
@@ -155,10 +307,6 @@
               the latest technologies, making students future-ready in critical
               fields.
             </p>
-            <!-- <img
-              src="https://images.unsplash.com/photo-1585796890481-60c5d59e0a10?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjcwMjN8MHx8c2VhcmNofDcyfHxTVEVNJTIwY2xhc3Nyb29tfGVufDB8fHx8fDE2Nzg1NjI4NjI&ixlib=rb-1.2.1&q=80&w=400"
-              alt="STEM Program Image"
-            /> -->
           </div>
           <div class="course-card">
             <h3>Arts & Creativity</h3>
@@ -167,10 +315,6 @@
               program encourages self-expression, innovation, and a deep
               understanding of the world around us.
             </p>
-            <!-- <img
-              src="https://images.unsplash.com/photo-1565267882-8b093faaf01a?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjcwMjN8MHx8c2VhcmNofDcxfHxhcnRzfGVufDB8fHx8fDE2Nzg1NjI4NzE&ixlib=rb-1.2.1&q=80&w=400"
-              alt="Arts and Creativity Image"
-            /> -->
           </div>
           <div class="course-card">
             <h3>Sports Excellence</h3>
@@ -179,10 +323,6 @@
               sports activities. Our sports programs help students develop both
               physically and mentally.
             </p>
-            <!-- <img
-              src="https://images.unsplash.com/photo-1588425357902-1663b9202268?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjcwMjN8MHx8c2VhcmNofDE0fHxzcG9ydHN8ZW58MHx8fHwxNjc4NTU1NzY1&ixlib=rb-1.2.1&q=80&w=400"
-              alt="Sports Excellence Image"
-            /> -->
           </div>
         </div>
       </div>
@@ -234,8 +374,15 @@
         <p>
           Hear from the families who trust us to shape their children’s future.
         </p>
-        <div class="testimonials-grid">
+        <!-- Slick Slider for Testimonials -->
+        <div class="testimonials-slider">
           <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/men/10.jpg"
+                alt="Priya Sharma"
+              />
+            </div>
             <p>
               "The school provides an exceptional environment for learning and
               growth. My child loves coming here every day."
@@ -243,6 +390,12 @@
             <h4>— Priya Sharma</h4>
           </div>
           <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/men/20.jpg"
+                alt="Rohan Gupta"
+              />
+            </div>
             <p>
               "Great teachers, state-of-the-art facilities, and a well-rounded
               curriculum make this school stand out."
@@ -250,6 +403,12 @@
             <h4>— Rohan Gupta</h4>
           </div>
           <div class="testimonial-card">
+            <div class="testimonial-avatar">
+              <img
+                src="https://randomuser.me/api/portraits/women/10.jpg"
+                alt="Amit Mehta"
+              />
+            </div>
             <p>
               "Sunder Deep World School helped my child develop not only
               academically, but also emotionally and socially. Truly a school
@@ -260,7 +419,6 @@
         </div>
       </div>
     </section>
-
     <!-- Contact Section -->
     <section id="contact" class="contact">
       <div class="container">
@@ -269,17 +427,80 @@
           We'd love to hear from you! Reach out for more information about our
           programs, campus tours, or any questions you may have.
         </p>
-        <form action="#" method="post">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="5"
-            required
-          ></textarea>
-          <button type="submit" class="btn">Send Message</button>
-        </form>
+
+        <!-- Contact Form -->
+        <div class="contact-form-card">
+          <form action="#" method="post" class="contact-form">
+            <div class="form-group">
+              <input
+                type="text"
+                name="name"
+                placeholder="Your Name"
+                required
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+                class="form-control"
+              />
+            </div>
+            <div class="form-group">
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+                class="form-control"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Details -->
+        <div class="contact-details-card">
+          <h3>Our Address</h3>
+          <p>
+            Sunder Deep World School, <br />
+            XYZ Road, City, State, India.
+          </p>
+          <h3>Call Us</h3>
+          <p>+91 123 456 7890</p>
+          <h3>Email Us</h3>
+          <p>info@sunderdeepworldschool.com</p>
+        </div>
+
+        <!-- Google Map -->
+        <div class="google-map">
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2929.142891440838!2d77.21783061482942!3d28.60926728117923!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390c30b74fe13d7d%3A0xc6c1a148404c5aef!2sSunder%20Deep%20World%20School!5e0!3m2!1sen!2sin!4v1630160893122!5m2!1sen!2sin"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+
+        <!-- Social Media Links -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com" class="social-icon"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="https://www.twitter.com" class="social-icon"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://www.instagram.com" class="social-icon"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
       </div>
     </section>
 
@@ -287,6 +508,13 @@
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
+          <!-- Logo Section -->
+          <div class="footer-logo">
+            <img
+              src="https://www.sunderdeepworld.in/assets/img/logo/4.png"
+              alt="Sunder Deep World School Logo"
+            />
+          </div>
           <div class="footer-about">
             <h3>Sunder Deep World School</h3>
             <p>
@@ -309,16 +537,24 @@
             <h4>Follow Us</h4>
             <ul>
               <li>
-                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-facebook"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-twitter"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-instagram"></i
+                ></a>
               </li>
               <li>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon"
+                  ><i class="fab fa-linkedin"></i
+                ></a>
               </li>
             </ul>
           </div>
